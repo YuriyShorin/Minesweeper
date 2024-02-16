@@ -1,8 +1,10 @@
-package ru.studiotg.minesweeper.utils;
+package ru.studiotg.minesweeper.model;
 
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
+@Getter
 public enum FieldState {
 
     UNOPENED(" "),

@@ -21,6 +21,7 @@ public class GameTurnRequest {
     private Integer column;
 
     @Schema(description = "Ряд проверяемой ячейки (нумерация с нуля)", example = "5")
+    @JsonProperty("row")
     @Min(value = 0, message = "Нумерация ячеек начинается с нуля")
     private Integer row;
 }
