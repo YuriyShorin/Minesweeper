@@ -24,6 +24,10 @@ dependencies {
 
     implementation 'com.fasterxml.jackson.core:jackson-core:2.16.1'
 
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
+    implementation 'org.postgresql:postgresql:42.7.1'
+    implementation 'org.liquibase:liquibase-core:4.25.1'
+
     compileOnly 'org.projectlombok:lombok:1.18.30'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
 

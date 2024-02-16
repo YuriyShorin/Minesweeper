@@ -31,7 +31,7 @@ public class MinesweeperController {
             description = "Игра создана",
             content = {@Content(mediaType = "application/json", schema = @Schema(implementation = GameInfoResponse.class))})
     @PostMapping("/new")
-    public ResponseEntity<GameInfoResponse> newGame(@RequestBody @Valid NewGameRequest newGameRequest) {
+    public ResponseEntity<?> newGame(@RequestBody @Valid NewGameRequest newGameRequest) {
         return minesweeperService.newGame(newGameRequest);
     }
 
@@ -41,7 +41,7 @@ public class MinesweeperController {
             description = "Ход сделан",
             content = {@Content(mediaType = "application/json", schema = @Schema(implementation = GameInfoResponse.class))})
     @PostMapping("/turn")
-    public ResponseEntity<GameInfoResponse> nextTurn(@RequestBody @Valid GameTurnRequest gameTurnRequest) {
+    public ResponseEntity<?> nextTurn(@RequestBody @Valid GameTurnRequest gameTurnRequest) {
         return minesweeperService.nextTurn(gameTurnRequest);
     }
 }

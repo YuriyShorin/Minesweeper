@@ -11,11 +11,13 @@ import lombok.Data;
 public class NewGameRequest {
 
     @Schema(description = "Ширина игрового поля", example = "10")
+    @JsonProperty("width")
     @Min(value = 2, message = "Ширина поля должна быть не меньше 2")
     @Max(value = 30, message = "Ширина поля не может превышать 30")
     private Integer width;
 
     @Schema(description = "Высота игрового поля", example = "10")
+    @JsonProperty("height")
     @Min(value = 2, message = "Высота поля должна быть не меньше 2")
     @Max(value = 30, message = "Высота поля не может превышать 30")
     private Integer height;
