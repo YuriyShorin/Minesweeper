@@ -20,4 +20,6 @@ public class Game {
     private Boolean completed;
 
     private String field;
+
+    private String currentField;
 }

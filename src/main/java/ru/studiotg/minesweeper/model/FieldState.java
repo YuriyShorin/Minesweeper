@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 public enum FieldState {
 
     UNOPENED(" "),
+    ZERO("0"),
     ONE("1"),
     TWO("2"),
     THREE("3"),

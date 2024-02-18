@@ -25,13 +25,26 @@ public class MinesweeperMapper {
         return gameInfoResponse;
     }
 
-    public Game newGameRequestToGame(NewGameRequest newGameRequest, String field) {
+    public Game newGameRequestToGame(NewGameRequest newGameRequest, String field, String currentField) {
         Game game = new Game();
         game.setWidth(newGameRequest.getWidth());
         game.setHeight(newGameRequest.getHeight());
         game.setMinesCount(newGameRequest.getMinesCount());
         game.setField(field);
+        game.setCurrentField(currentField);
 
         return game;
+    }
+
+    public GameInfoResponse gameToGameInfoResponse(Game game, List<List<String>> field) {
+        GameInfoResponse gameInfoResponse = new GameInfoResponse();
+        gameInfoResponse.setGameId(game.getGameId());
+        gameInfoResponse.setWidth(game.getWidth());
+        gameInfoResponse.setHeight(game.getHeight());
+        gameInfoResponse.setMinesCount(game.getMinesCount());
+        gameInfoResponse.setCompleted(game.getCompleted());
+        gameInfoResponse.setField(field);
+
+        return gameInfoResponse;
     }
 }
