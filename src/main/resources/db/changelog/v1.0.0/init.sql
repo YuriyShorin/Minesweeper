@@ -4,5 +4,6 @@ CREATE TABLE IF NOT EXISTS Games(
     height INTEGER NOT NULL,
     mines_count INTEGER NOT NULL,
     completed BOOLEAN NOT NULL DEFAULT FALSE,
-    field TEXT NOT NULL
+    field TEXT NOT NULL,
+    current_field TEXT NOT NULL
 );
