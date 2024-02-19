@@ -8,10 +8,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ru.studiotg.minesweeper.dto.GameInfoResponse;
 import ru.studiotg.minesweeper.dto.GameTurnRequest;
 import ru.studiotg.minesweeper.dto.NewGameRequest;
@@ -20,6 +17,7 @@ import ru.studiotg.minesweeper.service.MinesweeperService;
 @Tag(name = "Minesweeper controller", description = "АПИ игры Сапёр")
 @RequestMapping("/api/v1/minesweeper")
 @RestController
+@CrossOrigin(origins = "https://minesweeper-test.studiotg.ru/")
 @RequiredArgsConstructor
 public class MinesweeperController {
 
